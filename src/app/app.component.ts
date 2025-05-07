@@ -70,7 +70,7 @@ export class AppComponent implements AfterViewInit{
       y:0
     })
 
-    gsap.set(this.down.nativeElement,{y:-100})
+    gsap.set(this.down.nativeElement,{y:-500})
     t1.to(this.down.nativeElement,{
       duration:.5,
       opacity:1,
@@ -97,24 +97,24 @@ export class AppComponent implements AfterViewInit{
       })
 
       smoother.effects("img",{speed:"auto"})
-      let split = SplitText.create('.texte4', {
-        type:"chars"  
-      })
-      gsap.from(split.chars,{
-        y:100,
-        autoAlpha:0,
-        duration:1,
-        stagger:{
-          amount:0.5,
-          from:"random"
-        },
-        scrollTrigger:{
-          trigger: ".texte4",
-          start:"center 70%",
-          end:"top 50%",
-          scrub:1,
-        }
-      })
+      // let split = SplitText.create('.texte4', {
+      //   type:"chars"  
+      // })
+      // gsap.from(split.chars,{
+      //   y:100,
+      //   autoAlpha:0,
+      //   duration:1,
+      //   stagger:{
+      //     amount:0.5,
+      //     from:"random"
+      //   },
+      //   scrollTrigger:{
+      //     trigger: ".texte4",
+      //     start:"center 70%",
+      //     end:"top 50%",
+      //     scrub:1,
+      //   }
+      // })
       this.texteAnimation('.texte')
       this.texteAnimation('.texte2')
       this.texteAnimation('.texte3')
