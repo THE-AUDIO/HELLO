@@ -17,8 +17,10 @@ export class AppComponent implements AfterViewInit{
   @ViewChild('hello') hello!: ElementRef;
   @ViewChild('hello0') hello0!: ElementRef;
   @ViewChild('world0') world0!: ElementRef;
-  @ViewChild('line') line !: ElementRef
-  @ViewChild('boxes') boxes !: ElementRef
+  @ViewChild('line') line !: ElementRef;
+  @ViewChild('boxes') boxes !: ElementRef;
+  @ViewChild('btn') btn !: ElementRef;
+  @ViewChild('down') down !: ElementRef;
   texteAnimation(classe:string){
     let split = SplitText.create(classe, {
       type:"chars, words, lines"  
@@ -61,6 +63,19 @@ export class AppComponent implements AfterViewInit{
       marginTop:0,
       opacity:1
     })
+    gsap.set(this.btn.nativeElement,{y:100})
+    t1.to(this.btn.nativeElement,{
+      duration:.5,
+      opacity:1,
+      y:0
+    })
+
+    gsap.set(this.down.nativeElement,{y:-100})
+    t1.to(this.down.nativeElement,{
+      duration:.5,
+      opacity:1,
+      y:0
+    })
 
     gsap.timeline().to(spans, {
       y:0,
@@ -88,6 +103,7 @@ export class AppComponent implements AfterViewInit{
       gsap.from(split.chars,{
         y:100,
         autoAlpha:0,
+        duration:1,
         stagger:{
           amount:0.5,
           from:"random"
