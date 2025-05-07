@@ -1,0 +1,14 @@
+body{
+    margin: 0;
+    padding: 0;
+    
+}
+.line {
+    visibility: hidden;
+    width: 2px;
+    height: 4000px;
+    position: absolute;
+    left: 400px;
+    top: 0px;
+    background-color: #777;
+  }
