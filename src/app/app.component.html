@@ -12,7 +12,7 @@
           </div>
 
             <div class="box h-full w-1/2 bg-gray-500 flex justify-end items-center relative" data-speed="1" >
-              <button #btn class="w-[150px] opacity-0 h-[5vh] bg-white/85 px-[2px] py-[2px] text-white rounded-sm flex justify-around items-center absolute top-4 left-4 z-20">
+              <button #btn class="w-[150px] opacity-0 h-[6vh] bg-white/85 px-[2px] py-[2px] text-white rounded-sm flex justify-around items-center absolute top-4 left-4 z-20">
                 <span class="flex justify-center  items-center bg-black w-full h-full rounded-sm">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"  class="bi bi-house-door fill-white" viewBox="0 0 16 16">
                     <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"/>
@@ -20,46 +20,48 @@
                   <span class="ml-2 text-white">home</span>
                 </span>
               </button>
-                <span #hello0 class="text-[4rem] font-bold uppercase mr-4 -mt-40 opacity-0 z-20">Hello</span>
+                <span #hello0 class="hw font-bold uppercase mr-4 -mt-40 opacity-0 z-20">Hello</span>
                 <span #line class="absolute h-0 w-[1px] top-0 z-10 bg-black/85"></span>
             </div>
             <div class="box h-full w-1/2 bg-gray-500 flex justify-start items-center" data-speed="1.5" >
-              <span #world0 class="text-[4rem] font-bold uppercase ml-4 mt-40 opacity-0">World</span>
+              <span #world0 class="hw font-bold uppercase ml-4 mt-40 opacity-0">moon</span>
             </div>
         </div>
-        <section id="first" class=" h-screen w-full flex justify-center items-center bg-black/85 m-0 p-0">
-            <div class="w-1/2 h-[500px] flex justify-between items-start flex-col relative pl-4" data-speed="1.4">
-                <h2 #hello class="text-[#fdbc00] overflow-hidden z-10 text-[12rem] font-bold flex  justify-start items-start  h-[350px] w-full  relative">
+        <section id="first" class=" h-screen w-full flex justify-center items-center xl:flex-row flex-col bg-black/85 m-0 p-0">
+            <div class="w-full xl:w-1/2 h-[300px] xl:h-[500px] flex justify-between items-start flex-col relative pl-4" data-speed="1.4">
+                <h2 #hello class="text-[#fdbc00] overflow-hidden z-10 thk  font-bold flex  justify-start items-start  h-max w-full  relative">
                    <span>H</span>
                    <span>E</span>
                    <span>L</span>
                    <span>L</span>
                    <span>O</span>
                 </h2>
-                <p class="text-white text-xl font-bold h-[150px] texte p-2">
+                <p class="text-white text-sm xl:text-xl font-bold h-[150px] texte p-2">
                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus debitis sit, quod maiores et voluptatibus!
                 </p>
             </div>
-            <div class=" h-[500px] w-1/2 rounded-xl !overflow-hidden">
+            <div class="h-[300px] xl:h-[500px] w-full xl:w-1/2 rounded-xl !overflow-hidden">
               <img src="assets/images/bg1.jpeg" class="w-full object-fill" alt="vr headset">
             </div>
         </section>
-        <div class="h-screen w-full flex justify-center items-center bg-black/85 m-0 p-0">
-          <div class=" h-[500px] w-1/2  rounded-xl overflow-hidden">
+
+        <div class="h-screen w-full flex justify-center items-center xl:flex-row flex-col-reverse bg-black/85 m-0 p-0">
+          <div class=" h-[300px] xl:h-[500px] xl:w-1/2  w-full rounded-xl overflow-hidden">
             <img src="assets/images/bg2.jpeg" class="w-full h-[160%]" alt="">
           </div>
-          <div class="w-1/2 h-[500px] flex justify-start items-start flex-col relative p-4" data-speed="1.5">
-            <h2 #world class="text-white overflow-hidden z-10 text-[12rem] font-bold flex  justify-start items-center  h-[400px] w-full  relative">
-               <span class="texte2">WORLD</span>
+          <div class="p-4 w-full xl:w-1/2 h-[300px] xl:h-[500px] flex justify-between items-start flex-col relative " data-speed="1.5">
+            <h2 #world class="text-white overflow-hidden z-10 thk font-bold flex  justify-start items-center  h-max w-full  relative">
+               <span class="texte2">Moon</span>
             </h2>
-            <p class="text-white text-xl font-bold h-[100px] p-2 texte3">
+            <p class="text-white text-sm xl:text-xl font-bold p-2 texte3 w-full">
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, perferendis id? Temporibus voluptatibus recusandae quia!
-            </p>
+            </p>  
         </div>
         </div>
+        
         <section class="h-screen w-full bg-black flex justify-center items-center relative">
-              <h2 class="text-[12rem] texte4 text-white/85" data-speed="2">THANK-YOU</h2>
-              <p class="absolute bottom-4 left-4 text-white/85">
+              <h2 class="thk  text-white/85" data-speed="1.5">THANK-YOU</h2>
+              <p class="absolute bottom-4 left-4 text-sm xl:text-xl text-white/85">
                 POWERED BY THE AUDIO NANDRAINA
               </p>
         </section>

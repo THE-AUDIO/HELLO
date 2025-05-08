@@ -12,3 +12,11 @@ body{
     top: 0px;
     background-color: #777;
   }
+  
+  .thk{
+    font-size: clamp(2rem, 12vw, 12rem) !important;
+  }
+ .hw{
+    font-size: clamp(1rem, 10vw, 4rem) !important;
+
+ }
