@@ -18,5 +18,7 @@ body{
   }
  .hw{
     font-size: clamp(1rem, 10vw, 4rem) !important;
-
+ }
+ .no-scroll{
+    overflow: hidden !important;
  }

@@ -42,9 +42,25 @@ export class AppComponent implements AfterViewInit{
   }
   ngAfterViewInit(): void {
     if(isPlatformBrowser(this.platFormId)){
+      let smoother =  ScrollSmoother.create({
+        wrapper:"#wrapper",
+        content:"#content",
+        effects: true,
+      })
+
+      smoother.effects("img",{speed:"auto"})
+
     const spans = this.hello.nativeElement.querySelectorAll('span')
     gsap.set(spans, {opacity: 0, y:20 });
-    let t1 = gsap.timeline();
+    smoother.paused(true)
+    document.body.classList.add('no-scroll')
+    let t1 = gsap.timeline({
+      onComplete: () => {
+        // Réactiver le scroll après l'animation
+        document.body.classList.remove('no-scroll');
+        smoother.paused(false)
+      }
+    });
     t1.to(this.line.nativeElement,{
         duration:.5,
         height:"100%",
@@ -90,13 +106,7 @@ export class AppComponent implements AfterViewInit{
         scrub:1,
       }
     })
-    let smoother =  ScrollSmoother.create({
-        wrapper:"#wrapper",
-        content:"#content",
-        effects: true,
-      })
 
-      smoother.effects("img",{speed:"auto"})
       // let split = SplitText.create('.texte4', {
       //   type:"chars"  
       // })
